@@ -1,0 +1,11 @@
+{
+  "name": "Currency Converter",
+  "short_name": "Converter",
+  "description": "A web app for converting currencies.",
+  "version":"1.0.0",
+  "manifest_version":3,
+  "author":"Shuvam Khamrui",
+  "action":{
+    "default_popup":"index.html"
+  }
+}
