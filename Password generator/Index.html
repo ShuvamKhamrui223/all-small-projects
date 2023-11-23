@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Password generator</title>
+        <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+        <h2>password generator</h2>
+        <div class="formContainer">
+                <input type="text" id="passwordInput" readonly placeholder="Generated password will be">
+                <div>
+                        <input type="range" id="lengthSlider" min="8" max="50" value="8">
+                        <input type="number" id="lengthValue" value="8" min="8" max="50">
+                </div>
+                <div>
+                        <input type="checkbox" id="lowerChars" class="criteria">
+                        <label for="lowerChars">Include a-z</label>
+                </div>
+
+                <div>
+                        <input type="checkbox" id="upperChars" class="criteria">
+                        <label for="upperChars">Include A-Z</label>
+                </div>
+                <div>
+                        <input type="checkbox" name="" id="numbers" class="criteria">
+                        <label for="numbers">Include 0-9</label>
+                </div>
+                <div>
+                        <input type="checkbox" id="specialChars" class="criteria">
+                        <label for="specialChars">Include special characters</label>
+                </div>
+                <button id="generatePasswordtn">Generate password</button>
+                <button id="copyBtn">Copy to clipboard</button>
+        </div>
+        <script src="main.js"></script>
+</body>
+
+</html>
