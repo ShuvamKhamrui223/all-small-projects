@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    user-zoom: fixed;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    background-color: blueviolet;
+}
+
+.center {
+    width: 40%;
+    height: fit-content;
+    display: flex;
+    row-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.center>.menuBar {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding-inline: 1rem;
+    background-color: aliceblue;
+}
+
+.center>.menuBar>span {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    transform: translateY(-20%) rotate(45deg);
+    border-right: 0.125rem solid rgb(9, 5, 14);
+    border-bottom: 0.125rem solid rgb(18, 4, 31);
+}
+
+.center>.menuList {
+    width: 100%;
+    opacity: 0;
+    z-index: -2;
+    list-style: none;
+    overflow: hidden;
+    transform: translateY(10%);
+    transition: transform 0.2s ease-in, opacity 0.15s ease-in;
+    background-color: whitesmoke;
+}
+
+.menuList.on {
+    z-index: 0;
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+p,
+.menuList>li {
+    cursor: pointer;
+    overflow-y: auto;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    padding: 0.5rem 1.2rem;
+    color: rgb(9, 5, 14);
+    text-transform: capitalize;
+    transition: all 0.2s ease-in;
+}
+
+.menuList>li:hover {
+    background-color: rgb(231, 210, 250);
+    transform: scaleX(1.02);
+}
+
+.menuList>li:active {
+    background-color: rgb(216, 180, 248);
+    transform: scaleX(1.04);
+}
+
+.menuList>li:not(:last-child) {
+    border-bottom: 0.01em solid #000;
+
+}
