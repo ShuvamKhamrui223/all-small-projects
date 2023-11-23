@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #5160ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#myForm,
+#logInForm {
+  height: auto;
+  width: 80%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  box-shadow:
+    .5rem .5rem .8rem rgba(0, 0, 0, .4),
+    -.5rem -.5rem .8rem rgba(0, 0, 0, .4);
+}
+
+#logInForm {
+  display: none;
+}
+
+.username_div,
+.email_div,
+.password_div {
+  height: 25%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.password_div {
+  margin-bottom: 1rem;
+}
+
+label {
+  align-self: flex-start;
+  text-transform: capitalize;
+  margin: .5rem 0 0 1.5rem;
+  font-size: 1.3rem;
+}
+
+input {
+  width: 90%;
+  height: 4.5rem;
+  border: none;
+  outline: none;
+  padding: 1rem 1.5rem;
+  color: #5160ff;
+  caret-color: #5160ee;
+  font-size: 1.5rem;
+  border: .125rem solid #D1D1D4;
+  border-radius: .4rem;
+}
+
+input:valid {
+  border-color: #55FF77;
+}
+
+.err_msg {
+  color: red;
+  font-size: 1rem;
+  align-self: flex-start;
+  margin: .5rem 0 0 1.5rem;
+  text-transform: capitalize;
+}
+
+.InValid {
+  border: .25rem solid red;
+}
+
+button[type="submit"] {
+  height: fit-content;
+  width: 80%;
+  border: none;
+  outline: none;
+  padding: 1rem 1.5rem;
+  background-color: #5160ff;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.or {
+  margin: .5rem 0;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  letter-spacing: .0125rem;
+}
+
+#logInForm #logInBtn {
+  margin-top: 1.5rem;
+  height: fit-content;
+  width: 80%;
+  border: none;
+  outline: none;
+  padding: 1rem 1.5rem;
+  background-color: #5160ff;
+  color: white;
+  font-size: 1.1rem;
+}
+
+#signUpLink {
+  margin: .5rem 0;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+#signUpLink:visited {
+  color: #5160ff;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+.showLogOut{
+  display: block;
+}
+#logOut{
+  height: fit-content;
+  width: 80%;
+  border: none;
+  outline: none;
+  padding: 1rem 1.5rem;
+  background-color: #fff;
+  color: #5160ff;
+  font-size: 1.5rem;
+}

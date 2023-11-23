@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Random joke generator - Saved jokes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" title="" type="" />
+  <link rel="stylesheet" href="joke.css">
+  <link rel="stylesheet" href="image_joke.css">
+</head>
+
+<body>
+  <section class="saved_content_section" id="saved_content_box">
+
+    <aside>
+
+      <div class="menu_head">
+        <div class="acc_box">
+          <div class="img_box">
+            <i class="fas fa-user" id="user_icon"></i>
+          </div>
+          <span class="name_box">
+            <strong id="user_name">my name</strong>
+          </span>
+        </div>
+        <div class="theme_box">
+          <label for="dark theme" id="check_btn">
+
+            <i class="fas fa-sun icon" id="theme_btn"></i>
+            <input type="checkbox" id="check_btn" />
+          </label>
+        </div>
+      </div>
+      <div class="others">
+        <div class="menu_item">
+          <a href="joke.html">
+            <i class="fas fa-list"></i> text jokes</a>
+        </div>
+        <div class="menu_item">
+          <a href="image_joke.html"><i class="fas fa-images"></i> image jokes</a>
+        </div>
+        <div class="menu_item">
+          <a href="my_preference.html"><i class="fas fa-clipboard-list"></i>my preference</a>
+        </div>
+        <div class="menu_item active_tab"><a href="save_joke.html"><i class="fas fa-bookmark"></i>saved content</a></div>
+        <div class="menu_item">
+          <a href="share.html">
+            <i class="fas fa-share-alt">
+            </i>shared content</a>
+        </div>
+        <div class="menu_item">
+          <a href="#">
+            <i class="fas fa-sign-out-alt"></i>log out</a>
+        </div>
+      </div>
+    </aside>
+    <div class="sidebar_icon"> <i class="fas fa-bars sb_icon"></i>
+    </div>
+
+    <div class="item_save">
+      <p class="joke"></p>
+      <i class="fas fa-bookmark"></i>
+    </div>
+  </section>
+
+  <script>
+    let joke = localStorage.getItem('Joke');
+    var stored_joke = JSON.parse(localStorage.getItem('Joke'));
+    const sc_box = document.querySelector('.joke');
+    sc_box.innerHTML = stored_joke;
+    console.log(stored_joke);
+  </script>
+  <script src="sidebar.js"></script>
+  <script src="image_joke.js">
+  </script>
+  <script src="theme.js">
+  </script>
+  <script src="sidebar.js"></script>
+</body>
+
+</html>

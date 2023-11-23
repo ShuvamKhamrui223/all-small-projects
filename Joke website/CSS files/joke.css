@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+htm{
+  font-size: 62.5%;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  background-color: #5160FF;
+  display: grid;
+  place-items: center;
+  position: relative;
+  transition: background-color .5s ease-in-out;
+}
+
+aside {
+  height: 100vh;
+  width: 65vw;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  transform: translateX(-100%);
+  transition: transform .4s;
+
+  transition: all .4s ease-in-out;
+}
+
+aside.active {
+  transform: translateX(0%);
+  box-shadow: .24rem 0 .24rem rgba(0, 0, 0, .4);
+}
+
+.sidebar_icon {
+  height: fit-content;
+  width: auto;
+  position: absolute;
+  left: 5%;
+  top: 2%;
+  margin: .5rem 0;
+  transition: left .25s;
+}
+
+.sidebar_icon.active {
+  left: 85%;
+}
+
+.sidebar_icon i {
+  font-size: 1.5rem;
+  color: #fff;
+  padding: .5rem;
+}
+
+.menu_head {
+  height: 7rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #5263fe;
+  position: absolute;
+  inset: 0;
+}
+
+.menu_head .acc_box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.acc_box .img_box {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 .5rem;
+}
+
+.acc_box .img_box #user_icon {
+  font-size: 1.5rem;
+  color: #000044;
+}
+
+.acc_box .name_box {
+  height: auto;
+  width: calc(100% - 5rem);
+}
+
+.name_box strong {
+  font-size: 1.5rem;
+  color: white;
+  text-transform: capitalize;
+}
+aside .others{
+  height: 60%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  overflow-y: auto;
+  margin-top: 7rem;
+
+}
+.others .menu_item{
+  height: 2.5rem;
+  width: 100%;
+  transition: background-color .4s;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+
+}
+.menu_item a{
+  height: fit-content;
+  width: 100%;
+  text-decoration: none;
+  color: #2C374f;
+  font-size: 1rem;
+  text-transform: capitalize;
+
+  text-align: justify;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.menu_item a > i{
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  opacity: .85;
+  text-decoration: none;
+  color: #484C75;
+}
+
+.menu_item:hover{
+  background-color: rgba(140, 140, 200, .125);
+}
+.menu_item:hover i{
+  color: #2D304C;
+  opacity: 1;
+}
+.menu_item:active .menu_item a,menu_item i{
+  transform: scale(.95);
+}
+section.active .menu_item a,
+section.active i{
+  text-decoration: none;
+  color: #eee;
+}
+.logOut{
+  display: none;
+}
+section.active .menu_item:hover i{
+  color: #fff;
+}
+h1 {
+  color: white;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  margin-top: 1rem;
+}
+
+section.active {
+  background-color: #2C374E;
+}
+
+section.active aside {
+  background-color: #2C374f;
+}
+
+section.active .menu_head {
+  background-color: rgba(100, 100, 150, .4);
+}
+
+.theme_box {
+  height: fit-content;
+  width: auto;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  margin: .5rem 0;
+  border-radius: 50%;
+  background-color: white;
+  padding: .4rem;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.theme_box i {
+  color: #FFEB00;
+  font-size: 1.5rem;
+  transition: color .2s ease;
+}
+
+.center {
+  height: 60vh;
+  width: 80vw;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 1rem 1.2rem;
+  box-shadow:
+    .5rem .5rem .8rem rgba(0, 0, 0, .4),
+    -.5rem -.5rem .8rem rgba(0, 0, 0, .4);
+}
+
+section.active .center {
+  background-color: rgba(100, 100, 150, .4);
+}
+
+button {
+  height: fit-content;
+  width: 80%;
+  border: none;
+  outline: none;
+  padding: 1rem 1.5rem;
+  background-color: #5160ff;
+  color: white;
+  font-size: 1.1rem;
+}
+
+button:active {
+  transform: scale(.955);
+}
+
+.center h1 {
+  text-align: center;
+  color: #2C374E;
+  font-size: .85rem;
+}
+
+section.active h1 {
+  color: white;
+}
+
+/*#share_btn #share_btn {
+  font-size: 2rem;
+  color: #2A3853;
+}
+
+section.active #share_btn {
+  color: white;
+}*/
+#save_btn{
+  font-size: 2rem;
+  color: #9967FF;
+}
+#save_btn:active{
+  font-size: 1.8rem;
+}

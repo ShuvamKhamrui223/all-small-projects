@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../CSS files/login.css">
+  <title>Login</title>
+</head>
+
+<body>
+  <div id="myForm">
+    <h1>Sign up</h1>
+    <div class="username_div">
+      <label for="Username">
+        <strong>username</strong>
+      </label>
+      <input type="text" id="username" placeholder="Enter username" required minlength="3" maxlength="24">
+      <span id="err_msg_username" class="err_msg"></span>
+    </div>
+
+    <div class="email_div">
+      <label for="Email"><strong>email</strong></label>
+      <input type="email" id="Email" placeholder="example@gmail.com" required autocomplete="off">
+      <span id="err_msg_email" class="err_msg"></span>
+    </div>
+    <div class="password_div">
+      <label for="Password"><strong>password</strong></label>
+      <input type="password" id="Password" placeholder="Enter password" required><span id="err_msg_password" class="err_msg"></span>
+    </div>
+    <button id="signUpBtn" type="submit">Sign Up</button>
+    <span class="or">or</span>
+    <button type="submit" id="goToLogInPage">Login</button>
+
+  </div>
+
+  <div id="logInForm">
+    <h1>Login</h1>
+    <div class="email_div">
+      <label for="Email">
+        <strong>email</strong>
+      </label>
+      <input type="email" id="logInEmail" placeholder="example@gmail.com" required autocomplete="off">
+      <span id="logIn_err_msg_email" class="err_msg"></span>
+    </div>
+    <div class="password_div">
+      <label for="Password">
+        <strong>password</strong>
+      </label>
+      <input type="password" id="logInPassword" placeholder="Enter password" required>
+      <span id="logIn_err_msg_password" class="err_msg"></span>
+      <button type="submit" id="logInBtn">Login</button>
+      <a href="#" id="signUpLink">Create a new account</a>
+      
+      Or
+    </div>
+  </div>
+  
+  <button type="submit" id="logOut" class="hide">Log out</button>
+  <!-- script file for authentication -->
+  <script type="module" src="authentication.js"></script>
+</body>
+
+</html>

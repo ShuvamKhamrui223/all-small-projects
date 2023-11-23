@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Random jokes</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" title="" type="" />
+  <link rel="stylesheet" href="../CSS files/joke.css">
+  <link rel="stylesheet" href="../CSS files/image_joke.css">
+
+</head>
+
+<body>
+  <section>
+    <aside>
+      <div class="menu_head">
+        <div class="acc_box">
+          <div class="img_box">
+            <i class="fas fa-user" id="user_icon"></i>
+          </div>
+          <span class="name_box">
+            <strong id="user_name">my name</strong>
+          </span>
+        </div>
+        <div class="theme_box">
+          <label for="dark theme" id="check_btn">
+
+            <i class="fas fa-sun icon" id="theme_btn"></i>
+            <input type="checkbox" id="check_btn" />
+          </label>
+        </div>
+      </div>
+      <div class="others">
+        <div class="menu_item active_tab">
+          <a href="joke.html">
+            <i class="fas fa-list"></i> text jokes</a>
+        </div>
+        <div class="menu_item">
+          <a href="image_joke.html"><i class="fas fa-images"></i> image jokes</a>
+        </div>
+        <div class="menu_item">
+          <a href="my_preference.html"><i class="fas fa-clipboard-list"></i>my preference</a>
+        </div>
+        <div class="menu_item"><a href="save_joke.html"><i class="fas fa-bookmark"></i>saved content</a></div>
+        <div class="menu_item">
+          <a href="share.html">
+            <i class="fas fa-share-alt">
+            </i>shared content</a>
+        </div>
+        <div class="menu_item logOut">
+          <a href="#">
+            <i class="fas fa-sign-out-alt"></i>log out</a>
+        </div>
+      </div>
+    </aside>
+    <h1>try not to laugh</h1>
+    <div class="sidebar_icon"> <i class="fas fa-bars sb_icon"></i>
+    </div>
+
+
+    <div class="center show" id="text_box">
+      <h1 id="joke"></h1>
+      <button type="submit" id="joke_btn">Crack a joke</button>
+      <i class="far fa-bookmark" id="save_btn"></i>
+    </div>
+  </section>
+
+  <script src="../JS files/authentication.js" type="module"></script>
+  <!-- main js file -->
+
+  <script src="../JS files/joke.js" type="module">
+  </script>
+  <!-- js file for theme -->
+  <script src="../JS files/theme.js"></script>
+
+  <!-- js file for sidebar -->
+  <script src="../JS files/sidebar.js"></script>
+</body>
+<!--remove login for now fetch based users choice remove saved page -->
+
+</html>
